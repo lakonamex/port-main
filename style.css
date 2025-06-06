@@ -503,8 +503,8 @@ footer p {
     border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    background: rgb(250, 250, 250);
-    border: rgb(53, 53, 53) 0.1rem solid;
+    background: rgb(250, 250, 250) !important;
+    border: rgb(53, 53, 53) 0.1rem solid !important;
   }
   textarea {
     height: 12rem;
@@ -524,7 +524,7 @@ footer p {
     border-radius: 2rem;
   }
   input[type='submit']:hover {
-    background-color: rgb(53, 53, 53);
-    color: white;
+    background-color: rgb(53, 53, 53) !important;
+    color: white !important;
   }
   
