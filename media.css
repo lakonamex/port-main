@@ -81,10 +81,6 @@
         flex-wrap: wrap;
     }
     
-    .about-containers, .h3, .p {
-        font-size: 1rem;
-    }
-
     .contact-info-container {
         margin: 0;
     }
