@@ -100,7 +100,7 @@ a:hover {
     align-items: center;
     padding: 1rem 2rem;
     box-sizing: border-box;
-    transition: transform 0.1s ease-in-out;
+    /* transition: transform 0.1s ease-in-out; */
 }
 
 #burger-nav.hide {

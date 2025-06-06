@@ -65,6 +65,7 @@
     #profile {
         height: 83vh;
         margin-bottom: 0;
+        
     }
 
     article {
@@ -124,8 +125,6 @@
         text-align: justify;
     }
 
-
-    /* Mobile Styles (Burger Menu) */
 @media (max-width: 768px) {
     .burger-icon {
         display: flex;
@@ -162,7 +161,21 @@
         transform: translateY(-9px) rotate(-45deg);
     }
     #profile {
-        padding-top: 10rem;
+        /* padding-top: 5rem; */
+        margin-bottom: 1rem;
+    }
+
+    .about-containers {
+        padding: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .details-container p{
+        font-size: smaller;
+    }
+    
+    .details-container h3 {
+        font-size: medium;
     }
 }
 }
