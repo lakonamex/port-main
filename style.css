@@ -76,8 +76,8 @@ a:hover {
 }
 
 .logo {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 
 .logo:hover {
@@ -100,7 +100,7 @@ a:hover {
     align-items: center;
     padding: 1rem 2rem;
     box-sizing: border-box;
-    /* transition: transform 0.1s ease-in-out; */
+    transition: transform 0.3s ease;
 }
 
 #burger-nav.hide {
@@ -150,6 +150,13 @@ a:hover {
     font-weight: 500;
     border-radius: 4px;
     transition: all 0.3 ease;
+}
+
+.menu-links li a:hover{
+    color: gray;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181 181);
 }
 
 /* .menu-links.open {
@@ -360,12 +367,23 @@ section {
     position: relative;
 }
 
+.skill-text1 {
+    gap: 2rem;
+    text-align: left;
+    font-weight: 500;
+}
+
+.skill-title {
+    padding-bottom: 0;
+}
+
 .skills-grid {
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
     margin-top: 2rem;
+    padding: 0.1rem;
 }
 
 .skill-card {
@@ -381,6 +399,15 @@ section {
     flex-direction: column;
     flex: 1;
     align-items: center;
+    overflow-wrap: anywhere;
+    word-wrap: normal;
+    min-width: 200px;
+    max-width: 220px;
+}
+
+.prog-grid {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .skill-card:hover {
@@ -393,6 +420,8 @@ section {
     height: 50px;
     margin-bottom: 1rem;
 }
+
+
 
 /* .skill-card {
     animation: appear linear;
@@ -424,6 +453,119 @@ section {
 
 .article .icon {
     cursor: default;
+}
+
+/* certificates */
+
+.certificates-section {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    overflow: hidden;
+}
+
+.certificate-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, opacity 0.4s ease;
+    justify-content: center;
+    align-items: center;
+    display: relative;
+
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+}
+
+.certificate-preview {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.certificate-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.certificate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.certificate-card:hover .certificate-overlay {
+    opacity: 1;
+}
+
+.view-button {
+    padding: 8px 20px;
+    background: #fff;
+    color: #333;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.certificate-info {
+    padding: 1.5rem;
+}
+
+.certificate-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.certificate-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+/* see more btn */
+
+.see-more-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.see-more-btn {
+    background: white;
+    border: rgb(53, 53, 53) 1px solid;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    padding-right: 0%;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.see-more-btn:hover {
+    color:rgb(53, 53, 53);
+    text-decoration: underline;
+}
+
+.arrow-icon{
+    transition: transform 0.3s ease;
 }
 
 /* projects */

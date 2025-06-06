@@ -13,7 +13,7 @@
 
 <body>
     <nav id="desktop-nav">
-        <div class="logo">Lablab's Portfolio</div>
+        <div class="logo">Lablab's Portfolio.</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -25,7 +25,7 @@
     </nav>
 
     <nav id="burger-nav">
-        <div class="logo">Lablab's Portfolio</div>
+        <div class="logo">Lablab's Portfolio.</div>
         <div class="burger-menu">
             <div class="burger-icon" onclick="toggleMenu()">
                 <span></span>
@@ -34,16 +34,16 @@
             </div>
             <div>
                 <ul class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
                 </ul>
-                
+
             </div>
         </div>
     </nav>
-    <section id="profile">
+    <section id="profile" class="profile-section">
         <div class="section__pic-container">
             <img src="./assets/profile-pic.png" alt="Lablab profile pic">
         </div>
@@ -101,7 +101,9 @@
         <h1 class="name">Experience</h1>
         <div class="experience-details-container">
             <div class="skills-about-containers">
-                <div class="skills-grid">
+                <h2 class="section-title">Skills</h2>
+                <p class="section__text__p1 skill-text1">Programming</p>
+                <div class="skills-grid prog-grid">
                     <article class="skill-card"><img src="html-logo.png" alt="html logo" class="icon">
                         <div>
                             <h3>HTML</h3>
@@ -118,6 +120,14 @@
                     </article>
 
                     <article class="skill-card">
+                        <img src="java-logo.png" alt="java logo" class="icon">
+                        <div>
+                            <h3>Java</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
                         <img src="javascript-logo.png" alt="js logo" class="icon">
                         <div>
                             <h3>JavaScript</h3>
@@ -125,8 +135,134 @@
                         </div>
                     </article>
                 </div>
+                 <p class="section__text__p1 skill-text1">Design & Productivity Tools</p>
+                <div class="skills-grid prog-grid">
+                
+                    <article class="skill-card"><img src="figma.png" alt="figma logo" class="icon">
+                        <div>
+                            <h3>Figma</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <img src="canva-logo.svg" alt="canva logo" class="icon">
+                        <div>
+                            <h3>Canva</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <img src="google-logo.svg" alt="google logo" class="icon">
+                        <div>
+                            <h3>Google Suite</h3>
+                            <p>Advanced</p>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <img src="o365-logo.svg" alt="o365 logo" class="icon">
+                        <div>
+                            <h3>Microsoft 365</h3>
+                            <p>Advanced</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
+       
+            <div class="certificates-section">
+                <h2 class="section-title">Certifications</h2>
+                 <div class="skills-grid">
+                
+                    <div class="certificate-card">
+                        <div class="certificate-preview">
+                            <img src="./assets/sample-cert.jpg" alt="sample cert 1">
+                            <div class="certificate-overlay">
+                                <a href="./assets/sample-cert.jpg" class="view-button">View</a>
+                            </div>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>Sample Certificate 1</h3>
+                            <p>Issued: June 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="certificate-card">
+                        <div class="certificate-preview">
+                            <img src="./assets/sample-cert.jpg" alt="Sample Certificate 2">
+                            <div class="certificate-overlay">
+                                <a href="./assets/sample-cert.jpg" class="view-button">View</a>
+                            </div>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>Sample Certificate 2</h3>
+                            <p>Issued: March 2025</p>
+                        </div>
+                    </div>
+
+                     <div class="certificate-card">
+                        <div class="certificate-preview">
+                            <img src="./assets/sample-cert.jpg" alt="Sample Certificate 3">
+                            <div class="certificate-overlay">
+                                <a href="./assets/sample-cert.jpg" class="view-button">View</a>
+                            </div>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>Sample Certificate 3</h3>
+                            <p>Issued: March 2025</p>
+                        </div>
+                    </div>
+
+                     <div class="certificate-card">
+                        <div class="certificate-preview">
+                            <img src="./assets/sample-cert.jpg" alt="Sample Certificate 4">
+                            <div class="certificate-overlay">
+                                <a href="./assets/sample-cert.jpg" class="view-button">View</a>
+                            </div>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>Sample Certificate 4</h3>
+                            <p>Issued: March 2025</p>
+                        </div>
+                    </div>
+
+                     <div class="certificate-card">
+                        <div class="certificate-preview">
+                            <img src="./assets/sample-cert.jpg" alt="Sample Certificate 5">
+                            <div class="certificate-overlay">
+                                <a href="./assets/sample-cert.jpg" class="view-button">View</a>
+                            </div>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>Sample Certificate 5</h3>
+                            <p>Issued: March 2025</p>
+                        </div>
+                    </div>
+
+                     <div class="certificate-card">
+                        <div class="certificate-preview">
+                            <img src="./assets/sample-cert.jpg" alt="Sample Certificate 6">
+                            <div class="certificate-overlay">
+                                <a href="./assets/sample-cert.jpg" class="view-button">View</a>
+                            </div>
+                        </div>
+                        <div class="certificate-info">
+                            <h3>Sample Certificate 6</h3>
+                            <p>Issued: March 2025</p>
+                        </div>
+                    </div>
+            
+            </div>
+            <div class="see-more-container">
+                <button class="see-more-btn">
+                    Show More <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24">
+                        <path d="M19 91-7 7-7-7"/>
+                    </svg>
+                </button>
+            </div>
+            </div>
         </div>
         <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
     </section>

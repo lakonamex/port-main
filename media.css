@@ -10,6 +10,7 @@
 
     }
 
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -53,6 +54,7 @@
     .about-containers {
         margin-top: 0;
     }
+    
 }
 
 @media screen and (max-width: 600px) {
@@ -125,6 +127,12 @@
         text-align: justify;
     }
 
+     .prog-grid{
+        gap: 1.5rem;
+    }
+
+}
+
 @media (max-width: 768px) {
     .burger-icon {
         display: flex;
@@ -177,5 +185,8 @@
     .details-container h3 {
         font-size: medium;
     }
-}
+
+    .prog-grid{
+        gap: 0.5rem;
+    }
 }
