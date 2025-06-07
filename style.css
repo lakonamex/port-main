@@ -421,35 +421,11 @@ section {
     margin-bottom: 1rem;
 }
 
-
-
-/* .skill-card {
+.skill-card {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
-} */
-
-/* .experience-details-contaner {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.article-container {
-    display: flex;
-    text-align: initial;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: space-around;
-}
-
-.article {
-    display: flex;
-    width: 10rem;
-    justify-content: space-around;
-    gap: 0.5rem;
- } */
+} 
 
 .article .icon {
     cursor: default;
@@ -461,6 +437,7 @@ section {
     margin-top: 4rem;
     padding: 2rem 0;
     overflow: hidden;
+    margin-bottom: 4rem;
 }
 
 .certificate-card {
@@ -541,7 +518,8 @@ section {
 
 .see-more-container {
     text-align: center;
-    margin-top: 2rem;
+      margin-top: 2rem;
+
 }
 
 .see-more-btn {
@@ -551,17 +529,22 @@ section {
     font-weight: 600;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
     cursor: pointer;
-    padding: 0.5rem 1rem;
-    padding-right: 0%;
+    padding: 8px 16px;
     transition: all 0.3s ease;
+    justify-content: center;
     text-align: center;
+    width: 8rem;
+    
+}
+
+.see-more-btn:not(expanded) .arrow-icon{
+    margin-left: 0;
 }
 
 .see-more-btn:hover {
-    color:rgb(53, 53, 53);
-    text-decoration: underline;
+    background-color: rgb(53, 53, 53);
+    color: white;
 }
 
 .arrow-icon{
@@ -572,6 +555,7 @@ section {
 
 #projects {
     position: relative;
+    margin-top: 5%;
 }
 
 .color-container {

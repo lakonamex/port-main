@@ -189,4 +189,28 @@
     .prog-grid{
         gap: 0.5rem;
     }
+    .certificates-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .certificate-card, .mobile-hidden {
+        display: none;
+    }
+    .certificate-card:nth-child(-n+3){
+        display: block;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .certificate-card {
+        display: none;
+    }
+
+    .certificate-card:nth-child(-n+5) {
+        display: block;
+    }
+    
+    
 }

@@ -70,37 +70,42 @@ document.querySelectorAll('.menu-links a').forEach(link => {
             }
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
     const certificates = document.querySelectorAll('.certificate-card');
     const seeMoreBtn = document.querySelector('.see-more-btn');
-    const VISIBLE_CERTIFICATES = 5; // Number initially shown
-    
-    // Hide extra certificates on load
-    if (certificates.length > VISIBLE_CERTIFICATES) {
-        for (let i = VISIBLE_CERTIFICATES; i < certificates.length; i++) {
-            certificates[i].style.display = 'none';
-        }
-    } else {
-        document.querySelector('.see-more-container').style.display = 'none';
-    }
-    
-    // Toggle visibility
-    seeMoreBtn.addEventListener('click', function() {
-        const hiddenCerts = document.querySelectorAll('.certificate-card[style="display: none;"]');
-        const arrowIcon = this.querySelector('.arrow-icon');
+    const seeMoreContainer = document.querySelector('.see-more-container');
+    const DESKTOP_LIMIT = 5;
+    const MOBILE_LIMIT = 3;
+    let isExpanded = false;
+
+    function updateVisibility() {
+        const isMobile = window.innerWidth <= 768; // Standard mobile breakpoint
         
-        if (hiddenCerts.length > 0) {
-            // Show all certificates
-            hiddenCerts.forEach(cert => cert.style.display = 'block');
-            this.textContent = 'Show Less';
-            arrowIcon.style.transform = 'rotate(180deg)';
+        if (isMobile) {
+            // Mobile behavior
+            certificates.forEach((cert, index) => {
+                cert.style.display = (isExpanded || index < MOBILE_LIMIT) ? 'block' : 'none';
+            });
+            seeMoreContainer.style.display = certificates.length > MOBILE_LIMIT ? 'block' : 'none';
+            seeMoreBtn.textContent = isExpanded ? 'Show Less' : 'Show More';
         } else {
-            // Hide extra certificates
-            for (let i = VISIBLE_CERTIFICATES; i < certificates.length; i++) {
-                certificates[i].style.display = 'none';
-            }
-            this.textContent = 'Show More';
-            arrowIcon.style.transform = 'rotate(0deg)';
+            // Desktop behavior
+            certificates.forEach((cert, index) => {
+                cert.style.display = (isExpanded || index < DESKTOP_LIMIT) ? 'block' : 'none';
+            });
+            seeMoreContainer.style.display = certificates.length >  DESKTOP_LIMIT ? 'block' : 'none';
+            seeMoreBtn.textContent = isExpanded ? 'Show Less' : 'Show More';
+           
         }
+    }
+
+    // Toggle visibility on button click
+    seeMoreBtn.addEventListener('click', function() {
+        isExpanded = !isExpanded;
+        updateVisibility();
     });
+
+    // Initialize and update on resize
+    updateVisibility();
+    window.addEventListener('resize', updateVisibility);
 });
